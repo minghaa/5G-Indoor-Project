@@ -1,0 +1,38 @@
+{
+  "ppo": {
+    "learning_rate": 0.0003,
+    "n_steps": 256,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "clip_range_vf": null,
+    "ent_coef": 0.01,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "net_arch_pi": [
+      64,
+      64
+    ],
+    "net_arch_vf": [
+      64,
+      64
+    ]
+  },
+  "reward": {
+    "alpha_energy": 0.1,
+    "beta_drop": 100.0,
+    "gamma_latency": 20.0,
+    "delta_stability": 0.1
+  },
+  "training": {
+    "total_timesteps": 50000,
+    "eval_episodes": 5,
+    "save_freq": 10000,
+    "log_interval": 10,
+    "seed": 42,
+    "early_stop_reward": 20.0,
+    "patience": 50
+  }
+}
